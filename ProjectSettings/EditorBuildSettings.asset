@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start_.unity
+    guid: c11775d84d3e6454a8fcfc4d3807cd3c
+  - enabled: 1
+    path: Assets/Scenes/Stage_Day.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/InHouse_Day.unity
+    guid: 8e0eb200aea118143a7aabb717c308c8
+  - enabled: 1
+    path: Assets/Scenes/Stage_NIght.unity
+    guid: 6dcb89b788775a04f82298e4b4e7f843
+  - enabled: 1
+    path: Assets/Scenes/Stage_Dead.unity
+    guid: c84fa9d02d85b83498b006ff7dda7c35
+  m_configObjects: {}
