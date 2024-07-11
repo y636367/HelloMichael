@@ -1,7 +1,7 @@
 <div align=center> 
   
-<h1>HelloMichael 🔫</h1>
-1인칭 탈출 공포게임br>
+<h1>HelloMichael</h1>
+1인칭 탈출 공포게임<br>
 원인 모를 병으로 아내를 잃고 엎친데 덥친격으로 출근한 직장에서 해고통보를 받은 당신... <br>
 힘든 상황임에도 하나뿐인 딸을 위해 마음을 다잡고 당신은 집으로 향하는데... <br>
 link : https://drive.google.com/file/d/1XCc-HUcSGqNmUhZy6BaW_rU0uNsWA8sm/view?usp=drive_link
@@ -18,11 +18,11 @@ link : https://drive.google.com/file/d/1XCc-HUcSGqNmUhZy6BaW_rU0uNsWA8sm/view?us
  - 개발 엔진 및 사용언어: <img src="https://img.shields.io/badge/unity-000000?style=for-the-badge&logo=unity&logoColor=white"> / <img src="https://img.shields.io/badge/-C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white">
    
  ## 게임설명
-  - ### 로그인 및 회원가입(아이디, 비밀번호 찾기)
+  - ### 시작화면
     
-|<img src="https://github.com/y636367/HuntHunt/assets/63005842/36d55e0f-52b6-48d3-b510-e17bf8a701ce.png" width="200" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/3515f707-96cc-4da1-9daf-f89e3be945b1.png" width="200" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/e33b582f-0124-4386-9bfa-9fb3f3e10a93.png" width="200" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/8c2e9a63-6f1b-4c26-bd15-2000d3c88bc8.png" width="200" height="400"/>|
-|---|---|---|---|
-|<div align=center>로그인 화면</div>|<div align=center>회원가입 화면</div>|<div align=center>아이디 찾기</div>|<div align=center>비밀번호 찾기</div>|
+|<img src="https://github.com/y636367/HelloMichael/assets/63005842/180aae5a-8ef5-4399-81ba-f3b8c8f8a917" width="800" height="480"/>|
+|---|
+|<div align=center>시작 화면</div>|
 
 
 
@@ -61,16 +61,6 @@ link : https://drive.google.com/file/d/1XCc-HUcSGqNmUhZy6BaW_rU0uNsWA8sm/view?us
 3분 마다 중간 보스가 등장! 잘 회피하면서 보스를 사냥해 살아남자!<br>
 15분 마다 히든 보스가 등장! 중간 보스와 달리 스킬을 사용하니 조심하자!<br>
 
-<br>
-히든 보스
-
-|<img src="https://github.com/y636367/HuntHunt/assets/63005842/7221a2eb-f4ae-4438-9394-f68e5cd4624c.png" width="250" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/b569ab4d-4db4-424f-a519-a077b539bde9.png" width="250" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/473e9caa-20fb-43f2-ac00-a0d1983764cd.png" width="250" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/6e0f3412-494b-4975-aa78-95c52434e24f.png" width="250" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/9eef71c8-f174-4262-8843-aaac7663360f.png" width="250" height="400"/>|<img src="https://github.com/y636367/HuntHunt/assets/63005842/7fe84d85-8b24-4ed1-b551-17319b452001.png" width="250" height="400"/>|
-|---|---|---|---|---|---|
-|<div align=center>고스트</div>|<div align=center>풍뎅이</div>|<div align=center>스컬 킹</div>|<div align=center>머쉬 킹</div>|<div align=center>등푸른 거북이</div>|<div align=center>레드 슬라임</div>|
-
-<br>
- - 고스트 : 필드에서 사라져 일정시간 이 지나면 플레이어 근처에서 랜덤하게 다시 등장한다.<br>
- - 풍뎅이 : 플레이어를 향해서 돌진한다.<br>
  - 스컬 킹 : 자신의 체력을 일부 회복한다.<br>
  - 머쉬 킹 : 아무런 아이템을 드랍하지 않는 일반 몬스터를 소환합니다.<br>
  - 등푸른 거북이 : 회전하며 필드를 이리저리 충돌하며 플레이어를 위협합니다.<br>
