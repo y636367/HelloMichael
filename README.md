@@ -30,6 +30,24 @@ link : https://drive.google.com/file/d/1XCc-HUcSGqNmUhZy6BaW_rU0uNsWA8sm/view?us
 
 </div>
 
+  - ### 설정
+
+<div align=center> 
+  
+|<img src="https://github.com/y636367/HelloMichael/assets/63005842/7b33370f-7f72-4b4f-8840-333b70300973" width="400" height="240"/>|<img src="https://github.com/y636367/HelloMichael/assets/63005842/d6b4d0d1-7c3c-4e77-9f47-d86cf8dbb233" width="400" height="240"/>|
+|---|---|
+|<div align=center>난이도, 소리 설정</div>|<div align=center>마우스 설정</div>|
+|<img src="https://github.com/y636367/HelloMichael/assets/63005842/9fce54a1-7fd7-424c-b6d5-f9a7246a7b8e" width="400" height="240"/>|<img src="https://github.com/y636367/HelloMichael/assets/63005842/30fc38db-5ffd-47aa-89ab-919c703ef1bc" width="400" height="240"/>|
+|<div align=center>해상도, 그래픽 설정</div>|<div align=center>키 바인딩(동작)</div>|
+|<img src="https://github.com/y636367/HelloMichael/assets/63005842/ba878b6c-ceef-4e2d-a145-0f04d4d347d1" width="400" height="240"/>|<img src="https://github.com/y636367/HelloMichael/assets/63005842/c7b95d08-bc53-4c00-b832-4a0d6ef7d3fe" width="400" height="240"/>|
+|<div align=center>키 바인딩(조작)</div>|<div align=center>키 바인딩(기타)</div>|
+
+위 게임은 오직 영어만을 지원합니다만, 플레이 하는데 지장이 없을 정도로 번역하였습니다. <br>
+게임의 난이도는 기본으로 노멀로 설정되어 있습니다. 좀 더 하드한 플레이를 원한다면 난이도를 변경하시길 바랍니다. <br>
+(하지만 공포요소는 조절 할 수 없습니다.)
+
+</div>
+
 ## 게임정보
  - ### 인게임 화면
 스테이지
