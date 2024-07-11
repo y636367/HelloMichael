@@ -19,12 +19,16 @@ link : https://drive.google.com/file/d/1XCc-HUcSGqNmUhZy6BaW_rU0uNsWA8sm/view?us
    
  ## 게임설명
   - ### 시작화면
-    
+
+<div align=center> 
+  
 |<img src="https://github.com/y636367/HelloMichael/assets/63005842/180aae5a-8ef5-4399-81ba-f3b8c8f8a917" width="800" height="480"/>|
 |---|
 |<div align=center>시작 화면</div>|
 
+게임을 실행하면 마이클이 당신을 반겨줄 것입니다.<br> 그가 이상행동을 해도 놀라지 마세요.<br>
 
+</div>
 
 ## 게임정보
  - ### 인게임 화면
