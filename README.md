@@ -2,7 +2,7 @@
   
 <h1>HelloMichael :imp:</h1>
 1인칭 탈출 공포게임<br>
-원인 모를 병으로 아내를 잃고 엎친데 덥친격으로 출근한 직장에서 해고통보를 받은 당신... <br>
+원인 모를 병으로 아내를 잃고 엎친데 덮친격으로 출근한 직장에서 해고통보를 받은 당신... <br>
 힘든 상황임에도 하나뿐인 딸을 위해 마음을 다잡고 당신은 집으로 향하는데... <br>
 link : https://drive.google.com/file/d/1XCc-HUcSGqNmUhZy6BaW_rU0uNsWA8sm/view?usp=drive_link
 </div>
