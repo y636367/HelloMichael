@@ -65,11 +65,11 @@ public class Flashlight : MonoBehaviour
     }
     void Update()
     {
-        if (player.FlashGet == true&&no_battery!=true)
+        if (player.FlashGet&&!no_battery)
         {
             if(Flash_Timer <= 30)
             {
-                if (Flash_Timer > 0 && Check != false)
+                if (Flash_Timer > 0 && Check)
                 {
                     if(player.Move_Ok)
                         Flash_Timer -= Time.deltaTime;

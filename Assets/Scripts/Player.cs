@@ -218,7 +218,6 @@ public class Player : MonoBehaviour
         x = l + r;
         z = w + b; ;
 
-
         // 이동 판단
         if (x != 0 || z != 0)
         {
@@ -229,7 +228,7 @@ public class Player : MonoBehaviour
             moveMent.MoveSpeed = isRun == true ? status.RunSpeed : status.WalkSpeed;
         }
 
-        moveMent.MoveTo(new Vector3(x, 0, z));
+        moveMent.MoveTo(new Vector3(x, 0, z).normalized);
     }
     private void Crouching() //앉기 확인
     {
@@ -306,14 +305,11 @@ public class Player : MonoBehaviour
                         else
                         {
                             Bar.value = current_gague += 8.5f * Time.deltaTime;
-                            if (current_gague == gague_Max)
-                            {
+                            if (current_gague >= gague_Max)
                                 Re_Life_Check = false;
-                            }
                         }
                     }
                 }
-
                 if (current_gague <= 0 && !flashlight.Check)
                 {
                     Life(10);

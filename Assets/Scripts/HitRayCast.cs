@@ -241,7 +241,7 @@ public class HitRayCast : MonoBehaviour
                     {
                         hit.transform.GetComponent<Frame_Scripts>().Scripts();
                     }
-                    if (player.FlashGet != false)
+                    if (player.FlashGet)
                     {
                         if (hit.transform.CompareTag("Battery"))
                         {

@@ -26,8 +26,8 @@ public class OptionManager : MonoBehaviour
     public float current_smooth;
 
     [Header("VideoOption")]
-    private int Shadow_Quality; // 1~3 3ì´ ê³ í•´ìƒë„ í…ìŠ¤ì³ ì‚¬ìš©
-    private int Texture_Quality; // 1,3,5 5ê°€ ê³ í•´ìƒë„ í…ìŠ¤ì³ ì‚¬ìš©
+    private int Shadow_Quality; //  1~3 3ÀÌ °íÇØ»óµµ ÅØ½ºÃÄ »ç¿ë
+    private int Texture_Quality; // 1,3,5 5°¡ °íÇØ»óµµ ÅØ½ºÃÄ »ç¿ë
 
     public int Current_S_Quality;
     public int Current_T_Quality;
@@ -41,7 +41,7 @@ public class OptionManager : MonoBehaviour
     FullScreenMode fullScreenMode;
 
     [SerializeField]
-    private bool screenbutton; // ì „ì²´í™”ë©´ ì²´í¬
+    private bool screenbutton; // ÀüÃ¼È­¸é Ã¼Å©
 
     [SerializeField]
     private TMP_Text Screen_Mode;
@@ -160,28 +160,29 @@ public class OptionManager : MonoBehaviour
                 Resolution currentResolution = Screen.resolutions[i];
                 bool addResolution = true;
 
-                // resolutions ë¦¬ìŠ¤íŠ¸ì— ì´ë¯¸ ê°™ì€ ë¹„ìœ¨ì˜ í•´ìƒë„ê°€ ìˆëŠ”ì§€ í™•ì¸
+                // resolutions ¸®½ºÆ®¿¡ ÀÌ¹Ì °°Àº ºñÀ²ÀÇ ÇØ»óµµ°¡ ÀÖ´ÂÁö È®ÀÎ
+
                 for (int j = 0; j < resolutions.Count; j++)
                 {
                     Resolution existingResolution = resolutions[j];
                     if (currentResolution.width == existingResolution.width &&
                         currentResolution.height == existingResolution.height)
                     {
-                        // ì´ë¯¸ ê°™ì€ ë¹„ìœ¨ì˜ í•´ìƒë„ê°€ ìˆê³ , í˜„ì¬ í•´ìƒë„ì˜ refreshRateê°€ ë” ë†’ë‹¤ë©´ ê°±ì‹ 
+                        // ÀÌ¹Ì °°Àº ºñÀ²ÀÇ ÇØ»óµµ°¡ ÀÖ°í, ÇöÀç ÇØ»óµµÀÇ refreshRate°¡ ´õ ³ô´Ù¸é °»½Å
                         if (currentResolution.refreshRate > existingResolution.refreshRate)
                         {
                             resolutions.Remove(resolutions[j]);
                         }
                         else
                         {
-                            addResolution = false; // í˜„ì¬ í•´ìƒë„ë¥¼ ì¶”ê°€í•˜ì§€ ì•ŠìŒ
+                            addResolution = false; // ÇöÀç ÇØ»óµµ¸¦ Ãß°¡ÇÏÁö ¾ÊÀ½
                         }
                     }
                 }
 
                 if (addResolution)
                 {
-                    resolutions.Add(currentResolution); // í˜„ì¬ í•´ìƒë„ë¥¼ resolutions ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€
+                    resolutions.Add(currentResolution); // ÇöÀç ÇØ»óµµ¸¦ resolutions ¸®½ºÆ®¿¡ Ãß°¡
                 }
             }
         }
@@ -234,10 +235,10 @@ public class OptionManager : MonoBehaviour
     {
         Texture_Quality = Current_T_Quality = PlayerPrefs.GetInt(Texture_);
         Shadow_Quality = Current_S_Quality = PlayerPrefs.GetInt(Shadow_);
-        //Prefsë¡œ ë¶ˆëŸ¬ì˜´
+        //Prefs·Î ºÒ·¯¿È
 
         QualitySettings.SetQualityLevel(Current_T_Quality, true);
-        //í…ìŠ¤ì³ í’ˆì§ˆ ì ìš©
+        //ÅØ½ºÃÄ Ç°Áú Àû¿ë
         switch (Current_S_Quality)
         {
             case 0:
@@ -254,22 +255,22 @@ public class OptionManager : MonoBehaviour
                 break;
         }
         QualitySettings.shadowResolution = (ShadowResolution)Shadow_Quality;
-        //ê·¸ë¦¼ì í…ìŠ¤ì³ ì ìš©
+        //±×¸²ÀÚ ÅØ½ºÃÄ Àû¿ë
 
         resolutionNum = PlayerPrefs.GetInt(R_num);
 
         Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, fullScreenMode);
-        //Screen ì „ì²´ ì˜µì…˜ ì ìš©
+        //Screen ÀüÃ¼ ¿É¼Ç Àû¿ë
 
-        if ((float)setWidth / setHeight < (float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) // ê¸°ê¸°ì˜ í•´ìƒë„ ë¹„ê°€ ë” í° ê²½ìš°
+        if ((float)setWidth / setHeight < (float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) // ±â±âÀÇ ÇØ»óµµ ºñ°¡ ´õ Å« °æ¿ì
         {
-            float newWidth = ((float)setWidth / setHeight) / ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height); // ìƒˆë¡œìš´ ë„ˆë¹„
-            Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // ìƒˆë¡œìš´ Rect ì ìš©
+            float newWidth = ((float)setWidth / setHeight) / ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height); // »õ·Î¿î ³Êºñ
+            Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // »õ·Î¿î Rect Àû¿ë
         }
-        else // ê²Œì„ì˜ í•´ìƒë„ ë¹„ê°€ ë” í° ê²½ìš°
+        else // °ÔÀÓÀÇ ÇØ»óµµ ºñ°¡ ´õ Å« °æ¿ì
         {
-            float newHeight = ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) / ((float)setWidth / setHeight); // ìƒˆë¡œìš´ ë†’ì´
-            Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // ìƒˆë¡œìš´ Rect ì ìš©
+            float newHeight = ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) / ((float)setWidth / setHeight); // »õ·Î¿î ³ôÀÌ
+            Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // »õ·Î¿î Rect Àû¿ë
         }
         Debug.Log("Width " + resolutions[resolutionNum].width + " Height " + resolutions[resolutionNum].height + " Mode " + fullScreenMode);
     }
@@ -430,33 +431,33 @@ public class OptionManager : MonoBehaviour
     public void Scene_Set_Resolution()
     {
         Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, fullScreenMode);
-        //Screen ì „ì²´ ì˜µì…˜ ì ìš©      
+        //Screen ÀüÃ¼ ¿É¼Ç Àû¿ë        
 
-        if ((float)setWidth / setHeight < (float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) // ê¸°ê¸°ì˜ í•´ìƒë„ ë¹„ê°€ ë” í° ê²½ìš°
+        if ((float)setWidth / setHeight < (float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) // ±â±âÀÇ ÇØ»óµµ ºñ°¡ ´õ Å« °æ¿ì
         {
-            float newWidth = ((float)setWidth / setHeight) / ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height); // ìƒˆë¡œìš´ ë„ˆë¹„
-            Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // ìƒˆë¡œìš´ Rect ì ìš©
+            float newWidth = ((float)setWidth / setHeight) / ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height); // »õ·Î¿î ³Êºñ
+            Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // »õ·Î¿î Rect Àû¿ë
         }
-        else // ê²Œì„ì˜ í•´ìƒë„ ë¹„ê°€ ë” í° ê²½ìš°
+        else // °ÔÀÓÀÇ ÇØ»óµµ ºñ°¡ ´õ Å« °æ¿ì
         {
-            float newHeight = ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) / ((float)setWidth / setHeight); // ìƒˆë¡œìš´ ë†’ì´
-            Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // ìƒˆë¡œìš´ Rect ì ìš©
+            float newHeight = ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) / ((float)setWidth / setHeight); // »õ·Î¿î ³ôÀÌ
+            Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // »õ·Î¿î Rect Àû¿ë
         }
     }
     public void Scene_Set_Resolution(Camera t_camera)
     {
         Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, fullScreenMode);
-        //Screen ì „ì²´ ì˜µì…˜ ì ìš©      
+        //Screen ÀüÃ¼ ¿É¼Ç Àû¿ë     
 
-        if ((float)setWidth / setHeight < (float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) // ê¸°ê¸°ì˜ í•´ìƒë„ ë¹„ê°€ ë” í° ê²½ìš°
+        if ((float)setWidth / setHeight < (float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) // ±â±âÀÇ ÇØ»óµµ ºñ°¡ ´õ Å« °æ¿ì
         {
-            float newWidth = ((float)setWidth / setHeight) / ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height); // ìƒˆë¡œìš´ ë„ˆë¹„
-            t_camera.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // ìƒˆë¡œìš´ Rect ì ìš©
+            float newWidth = ((float)setWidth / setHeight) / ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height); // »õ·Î¿î ³Êºñ
+            t_camera.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // »õ·Î¿î Rect Àû¿ë
         }
-        else // ê²Œì„ì˜ í•´ìƒë„ ë¹„ê°€ ë” í° ê²½ìš°
+        else // °ÔÀÓÀÇ ÇØ»óµµ ºñ°¡ ´õ Å« °æ¿ì
         {
-            float newHeight = ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) / ((float)setWidth / setHeight); // ìƒˆë¡œìš´ ë†’ì´
-            t_camera.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // ìƒˆë¡œìš´ Rect ì ìš©
+            float newHeight = ((float)resolutions[resolutionNum].width / resolutions[resolutionNum].height) / ((float)setWidth / setHeight); // »õ·Î¿î ³ôÀÌ
+            t_camera.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // »õ·Î¿î Rect Àû¿ë
         }
     }
 }

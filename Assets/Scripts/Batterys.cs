@@ -58,12 +58,12 @@ public class Batterys : MonoBehaviour
     }
     public void Stop_Battery()
     {
+        StopCoroutine(Battery_Random_On());
         for(int i=0;i<Battery.Length;i++)
         {
             Battery[i].SetActive(false);
         }
         Count = P_Count;
-        StopCoroutine(Battery_Random_On());
     }
     public void Start_Battery()
     {
